@@ -1,4 +1,4 @@
-
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "ProgramObrazovanja")
