@@ -18,7 +18,7 @@ public class ProgramObrazovanja {
     public ProgramObrazovanja() {
     }
 
-    public ProgramObrazovanja(int csvet, String naziv) {
+    public ProgramObrazovanja(String naziv,int csvet) {
         this.csvet = csvet;
         this.naziv = naziv;
     }
