@@ -19,9 +19,9 @@ public class Main {
 
                 em.persist(program1);
                 transaction.commit();
-
-                System.out.println("Generalni ID : ");
                 int id = program1.getId();
+                System.out.println("Generalni ID : " + id);
+
             } catch (Exception e) {
                 transaction.rollback();
                 e.printStackTrace();
