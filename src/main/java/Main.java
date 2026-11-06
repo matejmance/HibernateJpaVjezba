@@ -24,9 +24,9 @@ public class Main {
 
                 em.clear();
 
-                transaction.begin();
+
                 ProgramObrazovanja program2 = em.find(ProgramObrazovanja.class, id);
-                transaction.commit();
+
 
                 System.out.println("Id : " + program2.getId());
                 System.out.println("Naziv : " + program2.getNaziv());
@@ -37,6 +37,24 @@ public class Main {
                 if(program3 == null){
                     System.out.println("Entitet ne postoji");
                 }
+
+                em.clear();
+                transaction.begin();
+                ProgramObrazovanja program4 = em.find(ProgramObrazovanja.class, id);
+                program4.setNaziv("Napredna Java Backend");
+                program4.setCsvet(25);
+                transaction.commit();
+                em.clear();
+
+
+                program2 = em.find(ProgramObrazovanja.class, id);
+
+
+                System.out.println("Id : " + program2.getId());
+                System.out.println("Naziv : " + program2.getNaziv());
+                System.out.println(("CSVET :  " + program2.getCsvet()));
+                em.clear();
+
 
 
             } catch (Exception e) {
