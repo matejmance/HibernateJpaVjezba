@@ -55,6 +55,26 @@ public class Main {
                 System.out.println(("CSVET :  " + program2.getCsvet()));
                 em.clear();
 
+                program2 = em.find(ProgramObrazovanja.class, 1);
+                em.clear();
+
+                program2.setNaziv("Spring Boot Backend");
+
+                transaction.begin();
+
+                ProgramObrazovanja managed = em.merge(program2);
+
+                transaction.commit();
+                em.clear();
+
+                program2 = em.find(ProgramObrazovanja.class, id);
+
+
+                System.out.println("Id : " + program2.getId());
+                System.out.println("Naziv : " + program2.getNaziv());
+                System.out.println(("CSVET :  " + program2.getCsvet()));
+                em.clear();
+
 
 
             } catch (Exception e) {
