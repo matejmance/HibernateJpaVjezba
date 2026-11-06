@@ -75,6 +75,20 @@ public class Main {
                 System.out.println(("CSVET :  " + program2.getCsvet()));
                 em.clear();
 
+                program2 = em.find(ProgramObrazovanja.class, id);
+                transaction.begin();
+                em.remove(program2);
+                transaction.commit();
+                em.clear();
+
+                program2 = em.find(ProgramObrazovanja.class, id);
+
+
+                if(program2 == null){
+                    System.out.println("em.find() VRAĆA NULL");
+                }
+
+
 
 
             } catch (Exception e) {
