@@ -3,17 +3,17 @@
 @Entity
 @Table(name = "ProgramObrazovanja")
 public class ProgramObrazovanja {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ProgramObrazovanjaID")
-    private int id;
+    private Integer id;
 
 
     @Column(name = "Naziv")
     private String naziv;
 
     @Column(name = "CSVET")
-    private int csvet;
+    private Integer csvet;
 
     public ProgramObrazovanja() {
     }
@@ -23,20 +23,12 @@ public class ProgramObrazovanja {
         this.naziv = naziv;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public int getCsvet() {
-        return csvet;
-    }
-
-    public void setCsvet(int csvet) {
-        this.csvet = csvet;
     }
 
     public String getNaziv() {
@@ -45,5 +37,13 @@ public class ProgramObrazovanja {
 
     public void setNaziv(String naziv) {
         this.naziv = naziv;
+    }
+
+    public Integer getCsvet() {
+        return csvet;
+    }
+
+    public void setCsvet(Integer csvet) {
+        this.csvet = csvet;
     }
 }
