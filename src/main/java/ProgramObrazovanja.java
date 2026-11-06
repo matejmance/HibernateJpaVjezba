@@ -1,5 +1,7 @@
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "ProgramObrazovanja")
 public class ProgramObrazovanja {
@@ -14,6 +16,9 @@ public class ProgramObrazovanja {
 
     @Column(name = "CSVET")
     private Integer csvet;
+
+    @OneToMany(mappedBy = "programObrazovanja")
+    List<Upis> upis;
 
     public ProgramObrazovanja() {
     }

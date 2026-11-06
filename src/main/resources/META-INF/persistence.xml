@@ -9,6 +9,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>ProgramObrazovanja</class>
+        <class>Upis</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver"
