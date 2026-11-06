@@ -33,6 +33,11 @@ public class Main {
                 System.out.println(("CSVET :  " + program2.getCsvet()));
                 em.clear();
 
+                ProgramObrazovanja program3 = em.find(ProgramObrazovanja.class, 9999);
+                if(program3 == null){
+                    System.out.println("Entitet ne postoji");
+                }
+
 
             } catch (Exception e) {
                 if(transaction.isActive()) transaction.rollback();
