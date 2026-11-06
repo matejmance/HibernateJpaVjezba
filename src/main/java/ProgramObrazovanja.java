@@ -5,13 +5,14 @@
 public class ProgramObrazovanja {
     @id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ProgramObrazovanjaID")
     private int id;
 
 
-    @column(name = "Naziv")
+    @Column(name = "Naziv")
     private String naziv;
 
-    @column(name = "CSVET")
+    @Column(name = "CSVET")
     private int csvet;
 
     public ProgramObrazovanja() {
@@ -22,12 +23,12 @@ public class ProgramObrazovanja {
         this.naziv = naziv;
     }
 
-    public int getProgramObrazovanjaID() {
-        return ProgramObrazovanjaID;
+    public int getId() {
+        return id;
     }
 
-    public void setProgramObrazovanjaID(int programObrazovanjaID) {
-        ProgramObrazovanjaID = programObrazovanjaID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCsvet() {
