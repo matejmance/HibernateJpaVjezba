@@ -27,9 +27,8 @@ public class Knjiga {
     public Knjiga() {
     }
 
-    public Knjiga(String naziv, Set<Izdavaci> izdavaci) {
+    public Knjiga(String naziv) {
         Naziv = naziv;
-        this.izdavaci = izdavaci;
     }
 
     public Integer getId() {

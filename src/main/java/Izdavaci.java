@@ -8,7 +8,7 @@ import java.util.Set;
 public class Izdavaci {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IzvdavacID")
+    @Column(name = "IzdavacID")
     private Integer id;
 
     @Column(name = "Naziv")
@@ -20,9 +20,8 @@ public class Izdavaci {
     public Izdavaci() {
     }
 
-    public Izdavaci(String naziv, Set<Knjiga> knjige) {
+    public Izdavaci(String naziv) {
         Naziv = naziv;
-        this.knjige = knjige;
     }
 
     public Integer getId() {

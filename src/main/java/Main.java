@@ -16,11 +16,19 @@ public class Main {
 
                 transaction.begin();
 
-                Knjiga knjiga = new Knjiga("Knjiga1",izdavac1);
-                em.persist(knjiga);
+                Knjiga knjiga = new Knjiga("Knjiga1");
+
 
                 Izdavaci izdavac1 = new Izdavaci("Izdavac1");
                 Izdavaci izdavac2 = new Izdavaci("Izdavac2");
+                em.persist(izdavac1);
+                em.persist(izdavac2);
+
+                knjiga.getIzdavaci().add(izdavac1);
+                knjiga.getIzdavaci().add(izdavac2);
+
+                em.persist(knjiga);
+
 
 
 
