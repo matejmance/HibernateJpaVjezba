@@ -13,11 +13,16 @@ public class Upis {
     @JoinColumn(name = "ProgramObrazovanjaID")
     private ProgramObrazovanja programObrazovanja;
 
+    @ManyToOne
+    @JoinColumn(name = "PolaznikID")
+    private Polaznik polaznik;
+
     public Upis() {
     }
 
-    public Upis(ProgramObrazovanja programObrazovanja) {
+    public Upis(ProgramObrazovanja programObrazovanja, Polaznik polaznik) {
         this.programObrazovanja = programObrazovanja;
+        this.polaznik = polaznik;
     }
 
     public ProgramObrazovanja getProgramObrazovanja() {

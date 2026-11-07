@@ -15,17 +15,19 @@ public class Main {
             try {
                 transaction.begin();
 
-                ProgramObrazovanja program1 = new ProgramObrazovanja("Java Backend", 20);
+                Polaznik polaznik = new Polaznik("Matej","Mance");
+                em.persist(polaznik);
 
-                em.persist(program1);
+                ProgramObrazovanja program = new ProgramObrazovanja("Java Backend",20);
+                em.persist(program);
 
-                int id = program1.getId();
-                Upis upis1 = new Upis(program1);
-                em.persist(upis1);
+                Upis upis = new Upis(program,polaznik);
+
+
 
                 transaction.commit();
 
-                em.clear();
+
 
 
 

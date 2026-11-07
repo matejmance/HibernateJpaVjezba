@@ -19,7 +19,7 @@ public class ProgramObrazovanja {
     private Integer csvet;
 
     @OneToMany(mappedBy = "programObrazovanja")
-    List<Upis> upis = new ArrayList<>();
+    private List<Upis> upisi = new ArrayList<>();
 
     public ProgramObrazovanja() {
     }
