@@ -18,7 +18,7 @@ public class Polaznik {
     @Column(name = "Prezime")
     private String prezime;
 
-    @OneToMany(mappedBy = "upis")
+    @OneToMany(mappedBy = "polaznik")
     private List<Upis> upisi = new ArrayList<>();
 
     public Polaznik() {

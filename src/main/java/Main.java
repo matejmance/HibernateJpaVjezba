@@ -22,6 +22,7 @@ public class Main {
                 em.persist(program);
 
                 Upis upis = new Upis(program,polaznik);
+                em.persist(upis);
 
 
 
