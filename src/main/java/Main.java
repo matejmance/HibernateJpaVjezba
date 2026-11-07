@@ -18,9 +18,12 @@ public class Main {
                 ProgramObrazovanja program1 = new ProgramObrazovanja("Java Backend", 20);
 
                 em.persist(program1);
-                transaction.commit();
+
                 int id = program1.getId();
-                System.out.println("Generalni ID : " + id);
+                Upis upis1 = new Upis(program1);
+                em.persist(upis1);
+
+                transaction.commit();
 
                 em.clear();
 

@@ -1,5 +1,6 @@
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,7 +19,7 @@ public class ProgramObrazovanja {
     private Integer csvet;
 
     @OneToMany(mappedBy = "programObrazovanja")
-    List<Upis> upis;
+    List<Upis> upis = new ArrayList<>();
 
     public ProgramObrazovanja() {
     }
