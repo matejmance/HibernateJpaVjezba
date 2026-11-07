@@ -11,6 +11,8 @@
         <class>ProgramObrazovanja</class>
         <class>Upis</class>
         <class>Polaznik</class>
+        <class>Knjiga</class>
+        <class>Izdavaci</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver"

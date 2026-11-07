@@ -13,20 +13,14 @@ public class Main {
             EntityTransaction transaction = em.getTransaction();
 
             try {
+
                 transaction.begin();
 
-                Polaznik polaznik = new Polaznik("Matej","Mance");
-                em.persist(polaznik);
+                Knjiga knjiga = new Knjiga("Knjiga1",izdavac1);
+                em.persist(knjiga);
 
-                ProgramObrazovanja program = new ProgramObrazovanja("Java Backend",20);
-                em.persist(program);
-
-                Upis upis = new Upis(program,polaznik);
-                em.persist(upis);
-
-
-
-                transaction.commit();
+                Izdavaci izdavac1 = new Izdavaci("Izdavac1");
+                Izdavaci izdavac2 = new Izdavaci("Izdavac2");
 
 
 
